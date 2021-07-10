@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find your Recipe</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+    <style>
+        .navcolor {
+            background-color: #7952b3;
+        }
+        .search_section {
+            background-image: url(HeroBackGrnd.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 60vh;
+        }
+        .catcolor {
+            color: #7952b3;
+        }
+
+        .catcolor:hover {
+            color: #fff;
+            background-color:#7952b3d5
+             /* rgba(255, 166, 0, 0.623); */
+        }
+        
+        .btn-orange {
+            color: #fff;
+            background-color: #7952b3;
+            border-color: #7952b3;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header navcolor sticky-top">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="navbar-brand text-light">Recipe Book</a>
+            </nav>
+        </div>
+    </div>
+
+    <section class="search_box search_section d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="search_inp" placeholder="Search your recipe here...">
+                        <div class="input-group-append">
+                          <button class="btn navcolor text-light" type="button" id="search_btn">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="content" class="bg-light py-5 ">
+        <div class="container">
+            <div class="CatHeading h2 p-2">
+                Categories
+            </div>
+            <div class="row justify-content-center justify-content-md-start" id="catContainer">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="CatSelectedSection" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center justify-content-md-start" id="catMeals">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="MealIndSection" class="mt-5 bg-light p-0 p-md-5">
+        <div class="container d-flex align-items-center"  id="eachMeal">
+            <!-- <div class="img_container">
+                <img src="" alt="" id="eachMeal_img" class="img_Meal">
+            </div> -->
+            <div class="contents">
+                <p class="h2" id="MealName"></p>
+                <p id="subCat"></p>
+                <div class="ingredeints" id="ingredeints">
+                    <p class="h4">Ingredients</p>
+                </div>
+                <div class="instructions" id="instructions">
+                    <p class="h4">Instructions</p>
+                    <p id = 'mealInst'></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="footer" class="py-2">
+        <div class="container text-center catcolor d-block d-md-flex align-items-center justify-content-center">
+            <h2>Recipe Book</h2>&nbsp;&nbsp;<span> created by @ Harish M</span>
+        </div>
+    </section>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
